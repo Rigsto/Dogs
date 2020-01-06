@@ -6,11 +6,15 @@
         <variable
             name="dog"
             type="com.masterkotlin.dogs.model.DogBreed" />
+        <variable
+            name="palette"
+            type="com.masterkotlin.dogs.model.DogPalette" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@{palette.color}"
         tools:context=".view.DetailFragment">
 
         <ImageView
@@ -27,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/dogImage"
+            tools:text="@string/app_name"
             android:text="@{dog.dogBreed}"
             style="@style/Title"
             android:layout_centerHorizontal="true"
